@@ -1,0 +1,261 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: rgba(11, 11, 13, 0.95); /* Updated to match footer color */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: var(--font-source-sans);
+}
+
+.scrolled {
+  height: 60px;
+  background-color: rgba(11, 11, 13, 0.98); /* Updated to match footer color */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoImageContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scrolled .logoImageContainer {
+  width: 32px;
+  height: 32px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px; /* Optional: for rounded corners */
+  transition: all 0.3s ease;
+}
+
+.scrolled .logoImage {
+  width: 32px; /* Slightly smaller when scrolled */
+  height: 32px;
+}
+
+.logoFallback {
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.scrolled .logoFallback {
+  width: 32px;
+  height: 32px;
+  font-size: 0.85rem;
+}
+
+.logoText {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  background: linear-gradient(90deg, #4da6ff, #a875ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  font-family: var(--font-source-sans);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navLink, .navLinkActive {
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: relative;
+  padding: 0.3rem 0;
+  font-family: var(--font-source-sans);
+}
+
+.navLink {
+  color: #bbb;
+}
+
+.navLinkActive {
+  color: #4da6ff;
+}
+
+.navLinkActive::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #4da6ff;
+  border-radius: 2px;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logoutButton {
+  color: #ff6b6b;
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--font-source-sans);
+}
+
+.logoutButton:hover {
+  color: #ff8f8f;
+}
+
+.loginButton {
+  background: linear-gradient(90deg, #4da6ff, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-family: var(--font-source-sans);
+}
+
+.loginButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
+}
+
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.userAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4da6ff;
+}
+
+.userInitial {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4da6ff, #a875ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.downloadButton {
+  background: linear-gradient(90deg, #4da6ff, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-family: var(--font-source-sans);
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .nav {
+    position: relative;
+    left: 0;
+    transform: none;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+  
+  .userActions {
+    gap: 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+  
+  .navLink, .navLinkActive, .logoutButton {
+    font-size: 0.9rem;
+  }
+} 

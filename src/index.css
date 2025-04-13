@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 232 58% 55%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-source-sans: var(--font-source-sans-3, 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #bbb;
+    background-color: #0b0b0d;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(to bottom right, #1A1F2C, #221F26);
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-400 to-cyan-300 text-transparent bg-clip-text;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg;
+  }
+
+  .glow {
+    box-shadow: 0 0 25px rgba(0, 153, 255, 0.5);
+  }
+
+  .button-hover {
+    @apply transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-accent/20;
+  }
+  
+  .login-button-gradient {
+    background: linear-gradient(to right, #4A59CA, #8D45C8);
+  }
+  
+  .logout-button-hover:hover {
+    background: linear-gradient(to right, #e05252, #c13030) !important;
+  }
+}
+
+.launch-tag {
+  position: relative;
+  overflow: hidden;
+}
+
+.launch-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  to {
+    left: 150%;
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+a {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.loadingScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0b0b0d;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.p-24 {
+  padding: 6rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.border {
+  border: 1px solid #333;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* For Header and Footer styles, see their respective CSS modules */

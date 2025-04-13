@@ -1,0 +1,148 @@
+.footer {
+  background-color: #0b0b0d;
+  padding: 4rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.logoImage {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+}
+
+.logoCircle {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 8px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.logoText {
+  font-weight: 700;
+  color: white;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #4da6ff, #a875ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: #a0a0a0;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  max-width: 20rem;
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.statusText {
+  color: #a0a0a0;
+  font-size: 0.875rem;
+}
+
+.linksTitle {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.link {
+  color: #a0a0a0;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: #8b5cf6;
+}
+
+.downloadButton {
+  background-color: #000;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .downloadButton {
+    width: auto;
+  }
+}
+
+.downloadButton:hover {
+  background-color: #111;
+  border-color: #444;
+}
+
+.copyright {
+  border-top: 1px solid #222;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.copyrightText {
+  color: #666;
+  font-size: 0.875rem;
+} 
