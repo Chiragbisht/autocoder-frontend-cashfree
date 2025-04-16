@@ -35,7 +35,7 @@ const About: React.FC = () => {
           <motion.section className="section" variants={item}>
             <h2>Our Story</h2>
             <p>
-              Founded in 2025 by Chirag Bisht an engineering graduates who loves creating mobile and webapps,
+              Founded in 2025 by an engineering graduate who loves creating mobile and webapps,
               AutoCoder was born from firsthand experience with the broken technical interview system.
             </p>
             <p>
